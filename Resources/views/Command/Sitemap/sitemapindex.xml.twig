@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% spaceless %}
+{% for sitemap_index in sitemap_indexes %}
+    <sitemap>
+        <loc>{{ sitemap_index.loc }}</loc>
+        {% if sitemap_index.lastmod is defined %}<lastmod>{{ sitemap_index.lastmod }}</lastmod>{% endif %}
+        {% if sitemap_index.changefreq is defined %}<changefreq>{{ sitemap_index.changefreq }}</changefreq>{% endif %}
+        {% if sitemap_index.priority is defined %}<priority>{{ sitemap_index.priority }}</priority>{% endif %}
+    </sitemap>
+{% endfor %}
+{% endspaceless %}
+</sitemapindex>

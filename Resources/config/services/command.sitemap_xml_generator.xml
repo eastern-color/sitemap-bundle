@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <defaults autowire="true" autoconfigure="true" public="false" />
+
+        <service id="eastern_color_sitemap_bundle.command.sitemap_xml_generator_provider_chain" class="EasternColor\SitemapBundle\Services\SitemapXmlGeneratorProvider\SitemapXmlGeneratorProviderChain" public="true" />
+
+        <prototype namespace="EasternColor\SitemapBundle\Services\SitemapXmlGeneratorProvider\" resource="../../Services/SitemapXmlGeneratorProvider/*Provider.php">
+        </prototype>
+    </services>
+
+</container>
