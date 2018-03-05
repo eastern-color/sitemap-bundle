@@ -18,7 +18,7 @@ class GenerateSitemapXmlCommand extends ContainerAwareCommand
     protected function configure()
     {
         $this
-            ->setName('ecsitemap:generate')
+            ->setName('ec:sitemap:generate')
             ->setDescription('Generate Sitemap XML')
             ->setHelp('This command is to Generate Sitemap XML')
             ->addOption('gzip', null, InputOption::VALUE_NONE, 'Gzip sitemap')
@@ -28,7 +28,7 @@ class GenerateSitemapXmlCommand extends ContainerAwareCommand
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $io = new SymfonyStyle($input, $output);
-        $io->title('[360img.net] Generate Sitemap XML');
+        $io->title('[EasternColor] Generate Sitemap XML');
         $gzip = (bool) $input->getOption('gzip');
 
         /* @var $sitemapXmlGeneratorProviderChain SitemapXmlGeneratorProviderChain */

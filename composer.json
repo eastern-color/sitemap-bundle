@@ -1,6 +1,6 @@
 {
     "name": "eastern-color/sitemap-bundle",
-    "description": "",
+    "description": "This Symfony bundle provide another way to manage your sitemap.",
     "keywords": ["Sitemap","Symfony"],
     "license": "MIT",
     "authors": [
